@@ -1,3 +1,6 @@
+/**
+ * 使用exports对象
+ */
 var myMsg = 'hello'
 
 var fn1 = function () {
