@@ -2,8 +2,8 @@
 let http = require("http")
 
 //从模块外部访问变量，函数或对象
-let foo = require("./tests/test1")
-let foo2 = require("./tests/test2")
+let foo = require("./test/test1")
+let foo2 = require("./test/test2")
 // 新建模块对象
 let myFoo = new foo2("Tom", 40);
 
@@ -29,8 +29,7 @@ server.listen(8001, (req) => {
     myFoo.name = '嚣张'; myFoo.age = 100;
     //获取修改后的公有变量值
     console.log('获取修改后的公有变量值', myFoo.name, myFoo.age);
-    console.log('获取modle路径', foo2.__filename);
-
+    console.log('获取modle文件路径', foo2.__filename);
 
     console.log("服务器开启成功!", server.address(), __filename, __dirname)
 })
